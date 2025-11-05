@@ -1,0 +1,8 @@
+fn main() {
+    let closure = fn () {
+        print_line("Hello from a closure!")
+    }
+
+    // Prints "Hello from a closure!"
+    closure.call()
+}

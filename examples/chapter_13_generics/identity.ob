@@ -1,0 +1,11 @@
+fn identity(value: t) -> t {
+    value
+}
+
+fn main() {
+    let one = identity(1)
+    let oxiby = identity("Oxiby")
+
+    print_line(one)
+    print_line(oxiby)
+}

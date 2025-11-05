@@ -1,0 +1,18 @@
+struct Person {
+    name: String,
+    age: Integer,
+
+    fn print_name(self) {
+        print_line("My name is #{self.name}.")
+    }
+}
+
+fn main() {
+    let person = Person {
+        name: "Alice",
+        age: 42,
+    }
+
+    //  Prints "My name is Alice."
+    person.print_name()
+}

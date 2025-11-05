@@ -1,0 +1,20 @@
+struct Person {
+    name: String,
+    age: Integer,
+}
+
+impl ToString for Person {
+    fn to_string(self) -> String {
+        "#{self.name} is #{self.age} years old."
+    }
+}
+
+fn main() {
+    let person = Person {
+        name: "Alice",
+        age: 42,
+    }
+
+    // Prints "Alice is 42 years old."
+    print_line(person)
+}

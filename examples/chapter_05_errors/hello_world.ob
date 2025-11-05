@@ -1,0 +1,10 @@
+use std.io read_line
+
+fn main() {
+    print("> ")
+
+    match read_line() {
+        Ok(line) -> print_line(line),
+        Err(reason) -> print_line("Error: #{reason}"),
+    }
+}

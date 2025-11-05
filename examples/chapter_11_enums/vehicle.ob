@@ -1,0 +1,25 @@
+enum Vehicle {
+    Car,
+    Truck,
+
+    fn car() -> Vehicle {
+        Vehicle.Car
+    }
+
+    fn truck() -> Vehicle {
+        Vehicle.Truck
+    }
+
+    fn start(self) -> String {
+        match self {
+            Vehicle.Car -> "Started the car.",
+            Vehicle.Truck -> "Started the truck.",
+        }
+    }
+}
+
+fn main() {
+    let car = Vehicle.Car
+
+    print_line(car.start())
+}

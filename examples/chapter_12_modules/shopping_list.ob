@@ -1,0 +1,19 @@
+pub struct ShoppingList {
+    map: HashMap<String, Integer>,
+
+    pub fn create() -> Self {
+        ShoppingList {
+            map: HashMap.new(),
+        }
+    }
+
+    pub fn add_food(self, food: String, quantity: Integer) -> Result<(), String> {
+        if quantity < 1 {
+            return Err("Quantity must be at least 1.")
+        }
+
+        self.map[food] = quantity
+
+        Ok(())
+    }
+}

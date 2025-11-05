@@ -1,0 +1,9 @@
+fn greet(name: String) -> String {
+    "Hello, #{name}!"
+}
+
+fn main() {
+    let greeting = greet("Oxiby")
+
+    print_line(greeting)
+}

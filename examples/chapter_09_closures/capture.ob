@@ -1,0 +1,14 @@
+fn make_greeting() -> Fn() -> String {
+    let name = "Oxiby"
+
+    fn () -> String {
+        "Hello, #{name}!"
+    }
+}
+
+fn main() {
+    let greeting = make_greeting()
+
+    // Prints "Hello, Oxiby!"
+    print_line(greeting.call())
+}

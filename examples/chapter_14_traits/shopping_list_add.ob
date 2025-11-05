@@ -1,0 +1,46 @@
+use std.ops Add
+
+struct ShoppingList {
+    map: HashMap<String, Integer>,
+
+    fn create() -> Self {
+        ShoppingList {
+            map: HashMap.new(),
+        }
+    }
+
+}
+
+impl Add for ShoppingList {
+    type output = Self
+
+    fn add(self, other: Self) -> Self.Output {
+        let combined_map = HashMap.new()
+
+        for (key, value) in self.map {
+            combined_map[key] = value
+        }
+
+        for (key, value) in other.map {
+            combined_map[key] = combined_map[key].unwrap_or(0) + value
+        }
+
+        ShoppingList {
+            map: combined_map,
+        }
+    }
+}
+
+fn main() {
+    let shopping_list_a = ShoppingList.create()
+    shopping_list_a.map["apple"] = 3
+    shopping_list_a.map["carrot"] = 1
+
+    let shopping_list_b = ShoppingList.create()
+    shopping_list_b.map["banana"] = 1
+    shopping_list_b.map["carrot"] = 1
+
+    let final_shopping_list = shopping_list_a.add(shopping_list_b)
+
+    print_line(final_shopping_list)
+}

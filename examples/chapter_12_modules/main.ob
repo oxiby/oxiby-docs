@@ -1,0 +1,10 @@
+use shopping_list ShoppingList
+
+fn main() {
+    let shopping_list = ShoppingList.create()
+
+    match shopping_list.add_food("apple", -1) {
+        Ok(_) -> print_line("Added apples to our shopping list."),
+        Err(error) -> print_line("Couldn't add apples to our shopping list: #{error}"),
+    }
+}

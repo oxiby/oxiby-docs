@@ -1,0 +1,20 @@
+struct ShoppingList {
+    map: HashMap<String, Integer>,
+
+    fn construct() {
+        ShoppingList {
+            map: ["apple": 3, "banana": 1, "carrot": 2],
+        }
+    }
+
+    fn print_contents(self) {
+        for (food, quantity) in self.map {
+            print_line("Quantity of #{food} to buy: #{quantity}")
+        }
+    }
+}
+
+fn main() {
+    let shopping_list = ShoppingList.construct()
+    shopping_list.print_contents()
+}

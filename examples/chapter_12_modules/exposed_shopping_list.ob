@@ -1,0 +1,13 @@
+struct ShoppingList {
+    map: HashMap<String, Integer>,
+}
+
+fn main() {
+    let shopping_list = ShoppingList {
+        map: HashMap.new(),
+    }
+
+    shopping_list.map["apple"] = -1
+
+    print_line("Number of apples to buy: #{shopping_list.map["apple"]}")
+}

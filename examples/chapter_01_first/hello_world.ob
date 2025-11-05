@@ -1,0 +1,4 @@
+// Welcome to Oxiby!
+fn main() {
+    print_line("Hello, World!")
+}

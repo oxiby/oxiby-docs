@@ -1,0 +1,13 @@
+fn main() {
+    let ok_integer = Ok(1)
+    let ok_string = Ok("Oxiby")
+
+    let err_integer = Err(-1)
+    let err_string = Err("Uh oh!")
+
+    let some_integer = Some(1)
+    let some_string = Some("Oxiby")
+
+    let none_integer = None
+    let none_string = None
+}

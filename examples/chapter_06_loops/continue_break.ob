@@ -1,0 +1,15 @@
+fn main() {
+    let fruits = ["apple", "banana", "carrot"]
+
+    for fruit in fruits {
+        if fruit == "apple" {
+            continue
+        }
+
+        print_line(fruit)
+
+        if fruit == "banana" {
+            break
+        }
+    }
+}

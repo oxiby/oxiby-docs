@@ -1,0 +1,15 @@
+use std.io read_line
+
+fn greet() -> String {
+    print("> ")
+
+    let name = read_line().unwrap_or("Oxiby").trim_end()
+
+    "Hello, #{name}!"
+}
+
+fn main() {
+    let greeting = greet()
+
+    print_line(greeting)
+}

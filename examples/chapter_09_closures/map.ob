@@ -1,0 +1,9 @@
+use std.io read_line
+
+fn main() {
+    let length = read_line().map(fn (s) {
+        s.length()
+    }).unwrap_or(0)
+
+    print_line("The input length was #{length}.")
+}

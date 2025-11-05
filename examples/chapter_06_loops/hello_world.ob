@@ -1,0 +1,22 @@
+use std.io read_line
+
+fn greet() -> List<String> {
+    print("> ")
+
+    let names = read_line().unwrap_or("Oxiby").trim_end().split(" ")
+    let greetings = []
+
+    for name in names {
+        greetings.push("Hello, #{name}!")
+    }
+
+    greetings
+}
+
+fn main() {
+    let greetings = greet()
+
+    for greeting in greetings {
+        print_line(greeting)
+    }
+}

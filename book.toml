@@ -1,0 +1,13 @@
+[book]
+authors = ["Jimmy Cuadra"]
+description = "Guide and reference documentation for the Oxiby programming language."
+language = "en"
+src = "src"
+title = "The Oxiby Programming Language"
+
+[output.html]
+additional-js = ["js/highlight.min.js", "js/oxiby.min.js"]
+cname = "www.oxiby.com"
+edit-url-template = "https://github.com/oxiby/oxiby-docs/edit/main/{path}"
+git-repository-url = "https://github.com/oxiby/oxiby-docs"
+hash-files = true

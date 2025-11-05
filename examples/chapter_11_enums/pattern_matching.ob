@@ -1,0 +1,25 @@
+enum E {
+    StructVariant {
+        a: String,
+        b: Integer,
+    },
+    TupleVariant(String),
+    UnitVariant,
+}
+
+fn main() {
+    let e = [
+        E.StructVariant {
+            a: "a",
+            b: 1,
+        },
+        E.TupleVariant("t"),
+        E.UnitVariant,
+    ].sample()
+
+    match e {
+        E.StructVariant { a, b } -> print_line("Struct variant with data #{a} and #{b}"),
+        E.TupleVariant(x) -> print_line("Tuple variant with data #{x}"),
+        E.UnitVariant -> print_line("Unit variant with no data"),
+    }
+}

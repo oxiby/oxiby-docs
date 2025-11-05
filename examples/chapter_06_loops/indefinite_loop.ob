@@ -1,0 +1,13 @@
+fn main() {
+    let i = 1
+
+    loop {
+        print_line(i)
+
+        i = i + 1
+
+        if i > 10 {
+            break
+        }
+    }
+}

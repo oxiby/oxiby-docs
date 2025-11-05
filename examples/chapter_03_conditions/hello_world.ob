@@ -1,0 +1,15 @@
+fn greet(name: String) -> String {
+    let salutation = if name == "Oxiby" {
+        "Greetings"
+    } else {
+        "Hello"
+    }
+
+    "#{salutation}, #{name}!"
+}
+
+fn main() {
+    let greeting = greet("Oxiby")
+
+    print_line(greeting)
+}
