@@ -30,7 +30,7 @@ $ obc run hello_world.ob
 ```
 
 Notice that only a `>` appears but no greeting is output yet.
-The program waits for input from us before it can proceed.
+The program waits for input from you before it can proceed.
 Type your name and hit return to let the program continue and greet you.
 
 ```plain
@@ -96,6 +96,9 @@ The benefit of methods is that they allow us to chain together sequences of func
 
 In our program, the function `read_line` returns a value, and we use the `.` operator to call the `unwrap_or` method on that value.
 Similarly, the `unwrap_or` method returns a value, and again we use the `.` operator to call the `trim_end` method on that value.
+
+`trim_end` is used to remove any extra whitespace from the end of a string.
+`unwrap_or` is used for error handling, which we'll learn about next.
 
 ## Fallible functions
 

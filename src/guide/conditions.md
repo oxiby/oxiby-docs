@@ -2,7 +2,7 @@
 
 Our program always says "hello" to the person we're greeting.
 What if we want to change our greeting depending on who is greeted?
-We can do that with conditional expressions.
+We can do that with conditional expressions, which are expressions that evaluate to boolean values, either `true` or `false`.
 
 ```oxiby
 // File: examples/chapter_03_conditions/hello_world.ob
@@ -43,9 +43,9 @@ name == "Oxiby"
 Operations are expressions for common mathematical operations like addition, subtraction, and equality.
 In our program we're using the equality comparison to check if the string bound to the variable `name` is `"Oxiby"`.
 
-Operations are sort of like function calls, but use __infix__, __prefix__, or __postfix__ notation.
+Operations are similar to function calls, but use **infix**, **prefix**, or **postfix** notation.
 
-Equality uses `==` with infix notation, where the two operands appear on either side of the operation.
+Equality uses the `==` operator with infix notation, where the two operands appear on either side of the operator.
 Conceptually, we can think of these two forms as equivalent:
 
 ```oxiby
@@ -72,7 +72,7 @@ list[0]
 
 ## Conditional expressions
 
-Conditional expressions allow our logic to __branch__ and do different things based on a comparison.
+Conditional expressions allow our logic to **branch** and do different things based on a boolean expression, such as a comparison.
 
 ```oxiby
 if name == "Oxiby" {

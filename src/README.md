@@ -57,12 +57,12 @@ Oxiby offers the following features for productive programming:
 
 ## Audience
 
-The language guide is not written for an audience presumed to have experience programming.
+The language guide is suitable for readers with or without programming experience.
 As such, many fundamental programming concepts are explained alongside their implementation in Oxiby.
 
 ## Caveats
 
-Oxiby is an experimental language and is not intended for use in serious projects.
+Oxiby is an experimental language and is not intended for use in production projects.
 
 Although it compiles to Ruby, it is not intended to be interoperable with existing Ruby programs.
 
@@ -73,6 +73,6 @@ That said, all syntactically valid Oxiby source code should compile into equival
 
 All the example programs shown in the language guide will compile and produce the expected behavior when run, with certain exceptions as noted.
 
-Throughout the guide, if a featuring being described is notably absent or differs from the current implementation, it will be denoted with a warning like this:
+Throughout the guide, if a feature being described is notably absent or differs from the current implementation, it will be denoted with a warning like this:
 
 > **Warning: This feature is not yet implemented.**

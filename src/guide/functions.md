@@ -46,7 +46,8 @@ In this case, our function returns a `String`.
 The value returned by a function is its final expression.
 In our case, that's the string `"Hello, #{name}!"`.
 If we want, we can also use the `return` keyword to specify the returned value explicitly.
-This form can be used to "return early" from a function, even if there are more expressions following it.
+This form can be used to "return early" from a function, even if it's not the last line of the function.
+We'll learn in a future chapter why we might want to do so.
 
 ```oxiby
 return "Hello, #{name}!"
@@ -62,6 +63,8 @@ let name = "Oxiby"
 
 A variable is created by binding a value to an identifier using `let`.
 The syntax is the keyword `let` followed by an identifier, an equals sign, and an expression.
+A variable name must start with a lowercase letter and should be written in [snake case](https://en.wikipedia.org/wiki/Snake_case), using all lowercase letters and separating "words" with an underscore, e.g. `example_variable_name`.
+
 `let` is actually much more powerful than this simple form, but we'll explore that further in a few chapters.
 
 ## String interpolation

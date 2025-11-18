@@ -135,7 +135,7 @@ fn main() {
 
 `continue` means "immediately proceed to the next iteration of the loop".
 `break` means "immediately stop iterating the loop".
-In this example, when the loop iterates on "apple", we continue to the next iteration before printing anything.
+In this example, when the loop iterates on "apple", we continue to the next iteration rather than printing anything.
 When the loop iterates on "banana", we print it and then break out of the loop before proceeding to "carrot".
 As a result, "banana" is the only one of the three fruits that is printed.
 
@@ -158,7 +158,7 @@ fn main() {
 }
 ```
 
-A `while` loop takes a conditional expression (an expression that evaluates to a boolean value) and a block of code.
+A `while` loop takes a conditional expression and a block of code.
 It starts by evaluating the condition.
 If it's `true`, the code in the block is executed and then the condition is evaluated again.
 If it's `false`, the loop ends and the program continues.

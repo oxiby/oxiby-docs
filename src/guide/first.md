@@ -39,7 +39,7 @@ Two slashes (`//`) begin a comment. Any text afterwards on the same line will be
 Strings, sequences of textual characters, are created by writing the text inside a pair of double quotes.
 
 "Literal" just means that there is dedicated syntax in the language to construct a string.
-There are other kinds of literals for different types in the language, such as integers (e.g. `123`) and boolean values (i.e. `true` and `false`).
+There are other kinds of literals for different types in the language, such as integers (e.g. `123`) and [boolean](https://en.wikipedia.org/wiki/Boolean_data_type) values (i.e. `true` and `false`).
 
 ## Functions
 
@@ -61,7 +61,8 @@ In our program, `main` has a body consisting of one expression.
 print_line("Hello, World!")
 ```
 
-A function is called by writing its name followed by any arguments to give it in parentheses.
+A function is called by writing its name followed by any function arguments in parentheses.
+An argument is input to the function that changes how it behaves.
 
 ## Writing to stdout
 
@@ -71,4 +72,4 @@ This is what causes "Hello, World!" to appear in the terminal when we run our pr
 
 ## The `main` function
 
-A function named `main` is automatically executed after its definition.
+When the program runs, if a function named `main` is defined, it will be automatically executed.

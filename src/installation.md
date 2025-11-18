@@ -1,11 +1,16 @@
 # Installation
 
+Executable commands shown on this page should be run in a terminal emulator on macOS or Linux.
+This process has not been tested on Windows, but will likely work the same way, especially when using Windows Subsystem for Linux.
+
 ## Prerequisites
 
 Oxiby requires:
 
+* Git to clone the compiler's source code
 * Ruby (version 3.4 or later) to run the programs produced by the Oxiby compiler
 * Rust (version 1.65 or later) to build the compiler itself
+  * Cargo, the build tool for Rust, which will be installed alongside Rust
 
 ## Installation steps
 
