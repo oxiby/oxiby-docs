@@ -112,7 +112,7 @@ In this example, we use a dedicated struct called `ShoppingList` to represent it
 Internally, our struct uses the same hash map as before to keep track of the actual data.
 In our main function, we create a new shopping list, and then set the quantity of apples to buy to -1.
 But that doesn't make any sense.
-How can you buy a negative amount of apples?
+How can you buy a negative number of apples?
 Our struct should protect access to its internal data to make sure the user doesn't change it to something that doesn't make sense.
 
 If we define the struct in its own module, we can use encapsulation to prevent this problem:
@@ -234,7 +234,7 @@ A field should be private if could be made invalid like it could with our shoppi
 > **Warning: The `Self` type alias is not yet available.
 > The version of the above program found in the examples directory uses `ShoppingList` instead to account for this.**
 
-> **Warning: Items and field visibility is not yet enforced, so code that should be private is currently accessible from other modules.**
+> **Warning: Item and field visibility is not yet enforced, so code that should be private is currently accessible from other modules.**
 
 > **Warning: Currently, modules cannot be in nested directories.
 > Outside of the automatically generated `std` modules, all user modules must live in the same directory.**

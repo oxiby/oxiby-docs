@@ -88,8 +88,8 @@ The parameter could just as easily be something like `string: t` or any other co
 
 But what is the meaning of the `s: ToString` in the where clause?
 This means that the type parameter `s` cannot be a value of _any_ type.
-It must be a value of a type that implement the `ToString` trait.
-We say that `s` is **constrained** to a type that implements `ToString` or that "`s` must be `ToString`".
+It must be a value of a type that implements the `ToString` trait.
+We say that `s` is **constrained** to a type that implements `ToString` or that "`s` must be `ToString`."
 
 Because `print_line` doesn't know anything about `s` other than that it implements `ToString`, it can't do much with it other than call the `to_string` method.
 But that's okay, because that's all `print_line` needs.
