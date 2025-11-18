@@ -1,7 +1,7 @@
 struct ShoppingList {
     map: HashMap<String, Integer>,
 
-    fn construct() {
+    fn create() {
         ShoppingList {
             map: ["apple": 3, "banana": 1, "carrot": 2],
         }
@@ -15,6 +15,6 @@ struct ShoppingList {
 }
 
 fn main() {
-    let shopping_list = ShoppingList.construct()
+    let shopping_list = ShoppingList.create()
     shopping_list.print_contents()
 }

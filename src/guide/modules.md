@@ -1,6 +1,6 @@
 # Organizing code with modules
 
-For simple programs like the ones we've written so far, there's no trouble fitting everything in one file, but for larger programs, it's useful to split things up across multiple files to help with readability and organization.
+For simple programs like the ones we've written so far, there's no trouble fitting everything in one file, but for larger programs, it's useful to split code up across multiple files to help with readability and organization.
 
 In Oxiby, a module is a single file containing Oxiby source code.
 Modules define types, functions, and a few more things we haven't learned about yet.

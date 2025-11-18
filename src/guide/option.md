@@ -15,7 +15,7 @@ enum Option<t> {
 
 We learned about enums previously when discussing the `Result` type.
 Recall that `Result` is a similar enum that represents either the success or failure of a computation.
-In `Result`'s case, both enum variants, `Ok` and `Err` contain a value that gives more information: either the value that was produced by a successful computation, or details about an error that occurred.
+In `Result`'s case, both enum variants, `Ok` and `Err`, contain a value that gives more information: either the value that was produced by a successful computation, or details about an error that occurred.
 
 `Option` is similar in that it has two variants, but the second case, `None`, does not hold any additional data, because the variant represents a lack of data entirely.
 
@@ -88,7 +88,7 @@ let fruits = ["apple", "banana", "carrot"]
 fruits[0] // "apple"
 ```
 
-It's worth noting that currently, this operation does _not_ return an `Option` like it does for hash maps, even though it's the same idea, conceptually.
+It's worth noting that currently, this operation does _not_ return an `Option`, as it does for hash maps, even though it's the same idea, conceptually.
 Instead, accessing an array index that is out of bounds (e.g. `fruits[3]` above) will cause an error when the program actually runs.
 This is primarily for convenience, since manual bounds checking on every list index would add a lot of extra code when working with nested lists.
 However, this is likely to change to a safer construct in a future revision of Oxiby.

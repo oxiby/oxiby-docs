@@ -32,14 +32,15 @@ Like structs, enum variants can also have named fields:
 
 ```oxiby
 enum Book {
-    Finished {
-        title: String,
+    Unread,
+    LeftOff {
+        page: Integer,
     },
-    BlankPages,
+    Read,
 }
 ```
 
-In this example, the `Finished` variant has a named field, while `BlankPages` is a unit variant with no fields.
+In this example, the `LeftOff` variant has a named field, while `Unread` and `Read` are unit variants with no fields.
 Since structs are usually used in the form with named fields, an enum variant with named fields is called a **struct variant**.
 
 For cases with data but where named fields aren't desired, we can also create **tuple variants**, just like tuple structs:

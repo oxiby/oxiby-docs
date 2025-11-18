@@ -32,7 +32,7 @@ Instead of a single variable name like `item`, we have two variables in parenthe
 
 The reason we're able to do this is that the expression that comes after `for` is not just a variable name, but a pattern.
 Remember that patterns allow us to __destructure__ compound values into their constituent parts.
-Don't worry about that too much for now.
+Don't worry about that for now.
 We'll explore patterns further in a future chapter.
 For now, just remember that when using a `for` loop with a hash map, we must bind both the key and the value.
 
@@ -48,7 +48,7 @@ If there was already a value associated with the key, it will be replaced with t
 
 ## Retrieving a value by key
 
-To access a specific value in a hash map, use the indexing operator, just like with lists, but with a key instead of an integer offset:
+To access a specific value in a hash map, use the indexing operator, just as with lists, but with a key instead of an integer offset:
 
 ```oxiby
 shopping_list["carrot"]

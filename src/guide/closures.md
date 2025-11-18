@@ -67,7 +67,7 @@ It will then return a _new_ result with the return value of our closure as its `
 If the original result was the `Err` variant, it will simply return itself and our closure won't be called.
 This allows us to specify a transformation for the `Ok` value without knowing in advance whether or not `read_line` succeeded.
 
-We might also notice that the type of the `s` parameter of the closure is not specified like it would be with a function.
+We might also notice that the type of the `s` parameter of the closure is not specified as it would be with a function.
 Because closures are usually used "inline" like this, and there's context from the surrounding code about how they're being used, it's okay to leave the variable types out.
 They will be figured out by the compiler.
 If we want to, we can specify the type of `s` using the same syntax as a regular function, `s: String`.
@@ -99,7 +99,7 @@ fn main() {
 
 The key insight here is that the body of the closure is _not executed_ until it is called on the last line of `main`.
 `make_greeting` is a function that _returns another function_, and this is reflected in its signature with the multiple return types chained with `->`.
-Specifically, `make_greeting` returns the type `Fn() -> String`, which is how we write the type of a closure that takes no arguments and returns a string.
+Specifically, `make_greeting` returns the type `Fn() -> String`, which is how we write the type of a closure that takes no arguments and returns a string.
 
 We store the closure returned by `make_greeting` in a local variable just called `greeting`.
 When we call the closure on the last line, it can still access `name`, a local variable that was defined at the point that the closure was defined, back in the `make_greeting` function, even though that function has already returned by the time we execute the closure.

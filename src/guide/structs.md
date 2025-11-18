@@ -107,12 +107,12 @@ We'll commonly see static functions used for **constructors**.
 These are functions that initialize a new value of the type:
 
 ```oxiby
-# File: examples/chapter_10_structs/static_methods.ob
+// File: examples/chapter_10_structs/static_methods.ob
 
 struct ShoppingList {
     map: HashMap<String, Integer>,
 
-    fn produce() {
+    fn new() {
         Self {
             map: ["apple": 3, "banana": 1, "carrot": 2],
         }
@@ -131,23 +131,25 @@ fn main() {
 }
 ```
 
-The static method `produce` constructs a new `ShoppingList` with a few predetermined food items to buy.
+The static method `new` constructs a new `ShoppingList` with a few predetermined food items to buy.
 Using this constructor function, we can easily create a new `ShoppingList` without having to know anything about `ShoppingList`'s fields.
-Both instance and static are called using the `.` operator.
+Both instance and static methods are called using the `.` operator.
 The difference is that instance methods are called via _values_ while static methods are called via the _type_ and are not associated with any particular value.
 
-We might have noticed that the `produce` function returns the type `Self`.
+We might have noticed that the `new` function returns the type `Self`.
 This is an alias that always refers to whatever type the associated function or method belongs to.
 In this case, writing `Self` is the same as writing `ShoppingList`.
 It's a nice shortcut that we can use to avoid writing the full name of the type over and over.
 It also means that if we decide to rename the type, we only have to change its name in one place within its definition.
 
 In Oxiby, static function names don't have any special meaning, so we don't have to name constructors anything specific like `new`, as we do in other programming languages.
+However, `new` is a coventional name that most programmers will find unsurprising, so it's a good idea to use for a type's main constructor.
 
 > **Warning: The `Self` type alias is not yet available.
 > The version of the above program found in the examples directory uses `ShoppingList` to account for this.**
 
-> **Warning: Currently, a static function named `new` _does_ have a special meaning and cannot be used for constructors.**
+> **Warning: Currently, a static function named `new` _does_ have a special meaning and cannot be used for constructors.
+> The version of the above program found in the examples directory uses `create` instead to account for this.**
 
 ## Tuple structs
 
@@ -178,7 +180,7 @@ The following are all examples of tuples:
 // Type: (Integer, String, String, String)
 (123, "Main Street", "Anytown", "New Mexico")
 
-// Type: () - an empty tuple, pronounced "unit"
+// Type: () - an empty tuple, called a "unit"
 ()
 
 // Type: (String)
