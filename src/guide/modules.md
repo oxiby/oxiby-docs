@@ -223,7 +223,7 @@ Private methods can be used for implementation details that outside code doesn't
 
 When writing our own types, it's a good idea to use the default, private visibility when possible.
 Only make fields and methods public with the `pub` keyword when you need to.
-A field should be private if could be made invalid like it could with our shopping list.
+A field should be private if it could be made invalid as it could with our shopping list.
 
 > **Warning: Currently, importing from a module does not automatically build that module.
 > Each dependent module must be built individually with `obc build`.**

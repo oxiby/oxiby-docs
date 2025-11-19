@@ -1,4 +1,4 @@
 fn main() {
-    let no_integer: Option<Integer> = None
-    let no_string: Option<String> = None
+    let none_integer: Option<Integer> = None
+    let none_string: Option<String> = None
 }

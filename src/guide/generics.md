@@ -123,8 +123,8 @@ In cases like this, we need to give the compiler a hint by adding type annotatio
 // File: examples/chapter_13_generics/type_annotation.ob
 
 fn main() {
-    let no_integer: Option<Integer> = None
-    let no_string: Option<String> = None
+    let none_integer: Option<Integer> = None
+    let none_string: Option<String> = None
 }
 ```
 

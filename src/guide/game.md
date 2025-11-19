@@ -29,7 +29,7 @@ struct Game {
     rows: List<List<Option<Player>>>,
 
     fn winner(self) -> Winner {
-        for row in (0..=2) {
+        for row in (0..2) {
             match (self.rows[row][0], self.rows[row][1], self.rows[row][2]) {
                 (Some(a), Some(b), Some(c)) -> {
                     if a == b && b == c {
@@ -40,7 +40,7 @@ struct Game {
             }
         }
 
-        for column in (0..=2) {
+        for column in (0..2) {
             match (self.rows[0][column], self.rows[1][column], self.rows[2][column]) {
                 (Some(a), Some(b), Some(c)) -> {
                     if a == b && b == c {
@@ -82,7 +82,7 @@ struct Game {
     }
 
     fn choose(self, cell: Integer, player: Player) -> Boolean {
-        if !(1..=9).contains(cell) {
+        if !(1..9).contains(cell) {
             return false
         }
 
@@ -352,7 +352,7 @@ Here's the definition of the `winner` method, which determines the win condition
 
 ```oxiby
 fn winner(self) -> Winner {
-    for row in (0..=2) {
+    for row in (0..2) {
         match (self.rows[row][0], self.rows[row][1], self.rows[row][2]) {
             (Some(a), Some(b), Some(c)) -> {
                 if a == b && b == c {
@@ -363,7 +363,7 @@ fn winner(self) -> Winner {
         }
     }
 
-    for column in (0..=2) {
+    for column in (0..2) {
         match (self.rows[0][column], self.rows[1][column], self.rows[2][column]) {
             (Some(a), Some(b), Some(c)) -> {
                 if a == b && b == c {
@@ -424,7 +424,7 @@ Finally:
 Let's look at one of these checks in a little more detail to see how it's done:
 
 ```oxiby
-for row in (0..=2) {
+for row in (0..2) {
     match (self.rows[row][0], self.rows[row][1], self.rows[row][2]) {
         (Some(a), Some(b), Some(c)) -> {
             if a == b && b == c {
@@ -437,10 +437,10 @@ for row in (0..=2) {
 ```
 
 This loops through each row in the grid and checks for rows that have all of the same mark.
-The expression `(0..=2)` creates a value of type `Range` that is used to represent a range of values in a meaningful order.
+The expression `(0..2)` creates a value of type `Range` that is used to represent a range of values in a meaningful order.
 The first number is the start of the range and the second number is the end of the range.
-The `=` means that the range is _inclusive_ of the second number, so in this case, we're creating a range cover the values `0`, `1`, and `2`.
-If we wanted to create an _exclusive_ range, we'd write `(0..2)`, which would cover only the values `0` and `1`.
+A range defined this way is _inclusive_ of the second number, so in this case, we're creating a range that covers the values `0`, `1`, and `2`.
+If we wanted to create an _exclusive_ range, we'd write `(0..<2)`, which would cover only the values `0` and `1`.
 
 Ranges can be iterated with a `for` loop.
 We loop over the three integers, with each bound to the variable `row`.
@@ -510,7 +510,7 @@ Again, this method's job is to try placing a player's mark in the given grid cel
 
 ```oxiby
 fn choose(self, cell: Integer, player: Player) -> Boolean {
-    if !(1..=9).contains(cell) {
+    if !(1..9).contains(cell) {
         return false
     }
 
@@ -525,7 +525,7 @@ fn choose(self, cell: Integer, player: Player) -> Boolean {
 ```
 
 The method begins with a conditional expression to check whether or not the integer entered by the player corresponds to a cell in the grid.
-We do this by creating a range of all valid cell numbers with `(1..=9)` and then calling the `contains` method on the range to check whether a specific element is part of that range.
+We do this by creating a range of all valid cell numbers with `(1..9)` and then calling the `contains` method on the range to check whether a specific element is part of that range.
 If it isn't, we know the player's choice was out of bounds, and hence an invalid value, so we return `false`.
 
 If the value is within the range, then we check whether or not there's already a mark in that cell by matching on the current value of the cell.
