@@ -1,6 +1,6 @@
 # Conventions
 
-In this documentation, the following conventions are used.
+In this book, the following conventions are used.
 
 ## Terms
 
@@ -38,7 +38,7 @@ Hover over the block and click on the clipboard icon that appears in the upper r
 
 ## Example code
 
-All of the example programs in the language guide are available in the `examples` directory of the documentation's Git repository, which you can find at [https://github.com/oxiby/oxiby-docs](https://github.com/oxiby/oxiby-docs).
+All of the example programs in the book are available in the `examples` directory of the book's Git repository, which you can find at [https://github.com/oxiby/book](https://github.com/oxiby/book).
 Each multi-line code block corresponding to an example program will begin with a code comment showing the path to that file within the repository:
 
 ```oxiby

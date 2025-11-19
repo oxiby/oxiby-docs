@@ -4,7 +4,7 @@ We've learned enough now that we can write some actually useful programs.
 We're going to write a version of the game tic-tac-toe that you can play with a friend in your terminal.
 
 We'll start by looking at the complete program.
-Then we'll break it down bit by bit to understand how it works and how it uses all the things we've learned in this language guide (as well as a few new things).
+Then we'll break it down bit by bit to understand how it works and how it uses all the things we've learned in this book (as well as a few new things).
 
 Paste the code below into an Oxiby file and run it with `obc run` to try the game.
 

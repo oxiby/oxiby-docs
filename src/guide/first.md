@@ -2,7 +2,7 @@
 
 As is tradition, we'll begin learning Oxiby with the ["Hello, World!"](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program) program.
 
-Create an empty directory to work on the programs in this guide.
+Create an empty directory to work on the programs in this book.
 Inside this new directory, create a new file called `hello_world.ob`.
 Enter the following text into the file:
 

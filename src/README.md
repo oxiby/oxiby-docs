@@ -57,7 +57,7 @@ Oxiby offers the following features for productive programming:
 
 ## Audience
 
-The language guide is suitable for readers with or without programming experience.
+The book is suitable for readers with or without programming experience.
 As such, many fundamental programming concepts are explained alongside their implementation in Oxiby.
 
 ## Caveats
@@ -71,8 +71,8 @@ As such, some of the behavior described in this book is aspirational.
 The plan is to implement the language as described in the book, so anything described here will be supported eventually.
 That said, all syntactically valid Oxiby source code should compile into equivalent Ruby, but the compiler will allow programs that shouldn't pass type checking, and Oxiby code can "escape" into Ruby not exposed by Oxiby.
 
-All the example programs shown in the language guide will compile and produce the expected behavior when run, with certain exceptions as noted.
+All the example programs shown in the book will compile and produce the expected behavior when run, with certain exceptions as noted.
 
-Throughout the guide, if a feature being described is notably absent or differs from the current implementation, it will be denoted with a warning like this:
+Throughout the book, if a feature being described is notably absent or differs from the current implementation, it will be denoted with a warning like this:
 
 > **Warning: This feature is not yet implemented.**
