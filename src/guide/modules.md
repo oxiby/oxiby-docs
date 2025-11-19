@@ -48,8 +48,6 @@ fn main() {
 
 In addition to reducing file size and grouping code for related functionality, modules also allow for hiding implementation details from other modules.
 
-> **Warning: The `self` module is not yet implemented.**
-
 ## Encapsulation and visibility
 
 By default, items are private to the module they are defined in, meaning that they cannot be imported into other modules.
