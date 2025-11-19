@@ -22,9 +22,9 @@ Oxiby has no equivalent to this behavior.
 Oxiby is also not strict about the mutability of values.
 This means that Oxiby programs are not protected from data races, whereas in Rust they are prevented statically.
 
-If you like Rust's type system and feature set, but aren't writing a program that needs manual memory management or strict enforcement over lifetimes, Oxiby should be easier to write.
-
 Finally, because Oxiby produces Ruby source code rather than native code, Rust programs will be signficantly more performant.
+
+If you like Rust's type system and feature set, but aren't writing a program that needs manual memory management, strict protection of immutable data, or maximal performance, Oxiby should be easier to use.
 
 Specific examples of some of the differences between the two languages follow.
 
@@ -41,6 +41,8 @@ fn main() {
 
 Oxiby has no such control.
 All data is allocated on the heap.
+This makes Oxiby easier to use because you don't need to think about the distinction and all types can be dynamically sized.
+However, this comes with a performance trade-off, since the bookkeeping required to manage heap memory has a cost.
 
 ### References and mutability
 
@@ -76,6 +78,9 @@ fn main() {
 }
 ```
 
+This means that Oxiby is easier to write, because you don't need to keep track of references and mutability.
+The trade-off is that you can introduce bugs by mutating data that should be immutable.
+
 ### Move semantics
 
 In Rust, moving a value (passing it by value rather than by reference) prevents access to it at its original location:
@@ -102,10 +107,13 @@ fn main() {
 }
 ```
 
+Move semantics are an important part of the system that provides Rust programs memory safety.
+Since Oxiby is executed by the Ruby interpreter, which uses garbage collection, programs are still memory safe, even without move semantics.
+
 ## Compared to Ruby
 
 Oxiby doesn't have much superficial similarity to Ruby.
-The main difference between the two is that Oxiby is statically typed.
+The biggest difference between the two is that Oxiby is statically typed.
 This means that Oxiby will statically eliminate many classes of errors that happen at runtime in Ruby programs.
 
 On the flip side, Oxiby programs are greatly constrained in terms of the dynamic behavior that is possible in Ruby.
