@@ -16,7 +16,6 @@ Hash maps may also be referred to as dictionaries, since they are structured lik
 The reason it's called a hash map is because it uses a [hash function](https://en.wikipedia.org/wiki/Hash_function) on each key to determine how to uniquely identify a key-value pair.
 Any type can be a value in a key-value pair, but only hashable types can be used as keys.
 All the basic data types, `Boolean`, `Integer`, `Float`, and `String` are hashable.
-We'll learn how to make our own types hashable in a future chapter.
 
 ## Iterating through key-value pairs
 
